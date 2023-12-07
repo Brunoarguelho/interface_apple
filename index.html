@@ -29,6 +29,10 @@
                 <p id="Relogio"></p>
              </div>
              <div class="notificacao">
+                <ion-icon name="logo-whatsapp" id="whats"></ion-icon>
+                <ion-icon name="logo-instagram" id="insta"></ion-icon>
+                <ion-icon name="logo-facebook" id="face"></ion-icon>
+                <ion-icon name="chatbox-ellipses-outline" id="balao"></ion-icon>
              </div>
             <!-- ------------------------------------ -->
             <div class="screen" id="screen">
@@ -36,14 +40,22 @@
                     <div class="volume-icon" id="volume-icon"></div> <!-- O ícone de volume foi movido para dentro do indicador de volume -->
                     <div class="volume-bar" id="volume-bar"></div>
                 </div>
+                <div id="overlay" style="display: none;">
+                    <form id="passwordForm">
+                        <label for="password">Digite a Senha</label>
+                        <input type="password" id="password" name="password">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="volume-buttons">
-            <div class="volume-button" onclick="decreaseVolume()"></div>
-            <div class="volume-button" onclick="increaseVolume()"></div>
+            <div class="volume-button" onclick="decreaseVolume()"></div> <!--volume + -->
+            <div class="volume-button" onclick="increaseVolume()"></div> <!--volume - -->
+
+            <div class="power-button" onclick="togglePower()"></div> <!--botão power-->
         </div>
     </div>
-    <div class="power-button" onclick="togglePower()"></div> <!--ficar fora do container-->
 </body>
 <script src="interface.js"></script>
 </html>

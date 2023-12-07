@@ -52,6 +52,36 @@ function updateScreen() {
         volumeIcon.style.display = 'none';
     }
 }
+
+function togglePower() { //primeria interface some quando desliga,e reaparece quando liga.
+    // Obtém os elementos
+    var wifiBateria = document.getElementsByClassName('wifi-bateria')[0];
+    var barraRede = document.getElementsByClassName('barra-rede')[0];
+    var horas = document.getElementsByClassName('horas')[0];
+    var notificacao = document.getElementsByClassName('notificacao')[0];
+
+    if (powerOn) {
+        setTimeout(function() { /* Adiciona um atraso de 2 Msegundos antes de desligar a tela */
+            powerOn = false;
+            // Esconde os elementos
+            wifiBateria.style.display = 'none';
+            barraRede.style.display = 'none';
+            horas.style.display = 'none';
+            notificacao.style.display = 'none';
+            updateScreen();
+        }, 200);
+
+    } else {
+        powerOn = true;
+        // Mostra os elementos
+        wifiBateria.style.display = 'block';
+        barraRede.style.display = 'block';
+        horas.style.display = 'block';
+        notificacao.style.display = 'block';
+        updateScreen();
+    }
+}
+
 // ---------------------------relogio-------------------------------------
 function atualizarRelogio() {
     var agora = new Date(); // obtém a data e hora atual
@@ -74,3 +104,28 @@ function atualizarRelogio() {
 
 // Inicia o relógio
 atualizarRelogio();
+/*------------------------------------------*/
+
+document.getElementById('screen').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+});
+//overlay quando clica na tela,aparece pedindo a senha
+document.getElementById('passwordForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // impede o envio do formulário
+    var password = document.getElementById('password').value;
+    if (password === '0000') { // 'senha correta' escolha sua senha
+        document.getElementById('overlay').style.display = 'none';
+    } else {
+        alert('Senha incorreta!');
+    }
+});
+var passwordForm = document.getElementById('passwordForm');
+
+// Em seguida, adicione um evento de clique ao elemento de sobreposição
+overlay.addEventListener('click', function(event) {
+    // Verifique se o clique foi fora do formulário de senha
+    if (event.target === overlay) {
+        // Se sim, esconda a sobreposição
+        overlay.style.display = 'none';
+    }
+});
