@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.iphone {
+    width: 320px;
+    height: 620px;
+    background-color: #000;
+    border-radius: 40px;
+    border: 2px solid #333;
+    box-shadow: 3px 2px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.case{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.case img{
+    width: 15px;
+    height: 15px;
+    margin-left: 75px;
+    opacity: 0.3;
+}
+
+.wifi-bateria{
+    position: absolute;
+    top: 2px;
+    left: 87%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 30px;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+    font-size: 20px;
+}
+
+.barra-rede{
+    position: absolute;
+    top: 1.5px;
+    left: 15%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 999;
+    font-size: 18px;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-image: url(imagem/fundo-iphpne.jpg);
+    background-size: cover;
+    background-position: center;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.horas{
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    font-size: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*--------------------------------------*/
+.volume-buttons {
+    position: absolute;
+    right: -3px;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.volume-button {
+    width: 4px;
+    height: 60px;
+    background-color: rgb(74, 74, 74);
+    border-radius: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.volume-indicator { /*interface volume*/
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.volume-bar { /*interface volume*/
+    height: 100%;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.volume-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(imagem/img-volume.png);
+    background-size: cover;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* O ícone de volume está oculto inicialmente */
+}
+
+.power-button{
+    width: 5px;
+    height: 50px;
+    background-color: rgb(74, 74, 74);
+    border-radius: 5px;
+    position: absolute;
+    top: 45%;
+    right: 39.4%;
+    cursor: pointer;
+}
+/*-----------------------*/
+

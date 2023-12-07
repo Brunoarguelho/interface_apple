@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+ <!-- 
+
+  -->
+<body>
+    <div class="container">
+        <div class="iphone">
+            <div class="case" id=case>
+                <img src="imagem/img-carema.png" alt="lente camera">
+            </div>
+            <div class="wifi-bateria">
+                <ion-icon name="wifi-outline" id="wifi"></ion-icon>
+                <ion-icon name="battery-full-outline" id="bateria"></ion-icon>
+            </div>
+            <div class="barra-rede">
+                <ion-icon name="cellular-outline" id="rede"></ion-icon>
+                <p id="telmovel">TM</p>
+            </div>
+             <div class="horas">
+                <p id="Relogio"></p>
+             </div>
+             <div class="notificacao">
+             </div>
+            <!-- ------------------------------------ -->
+            <div class="screen" id="screen">
+                <div class="volume-indicator" id="volume-indicator">
+                    <div class="volume-icon" id="volume-icon"></div> <!-- O ícone de volume foi movido para dentro do indicador de volume -->
+                    <div class="volume-bar" id="volume-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="volume-buttons">
+            <div class="volume-button" onclick="decreaseVolume()"></div>
+            <div class="volume-button" onclick="increaseVolume()"></div>
+        </div>
+    </div>
+    <div class="power-button" onclick="togglePower()"></div> <!--ficar fora do container-->
+</body>
+<script src="interface.js"></script>
+</html>

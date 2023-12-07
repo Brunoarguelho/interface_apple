@@ -1,0 +1,19 @@
+
+    <div class="container">
+        <div class="iphone">
+            <div class="case" id=case>
+                   <img src="imagem/img-carema.png" alt="lente camera">
+            </div>
+
+            <div class="screen" id="screen">
+                <div class="volume-indicator" id="volume-indicator"></div>
+                    <div class="volume-icon" id="volume-icon"></div>
+                    <div class="volume-bar" id="volume-bar"></div>
+            </div> 
+        </div> 
+            <div class="volume-buttons">
+                <div class="volume-button" onclick="increaseVolume()"></div>
+                <div class="volume-button" onclick="decreaseVolume()"></div>
+            </div>
+        <div class="button-desliga" onclick="changeColor()"></div>
+    </div>
