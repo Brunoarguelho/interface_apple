@@ -39,7 +39,7 @@ function updateVolume() {
         timeoutId = setTimeout(function() {
             volumeIndicator.style.display = 'none';
             volumeIcon.style.display = 'none';
-        }, 5000); //tempo volume ficar visivel
+        }, 2000); //tempo volume ficar visivel
     }
 }
 function updateScreen() {
@@ -137,7 +137,7 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
         telaPrincipal.style.display = 'block';
         notificacao.style.display = 'none';
     } else {
-        alert('Senha incorreta!');//mensagem
+        alert('Senha incorreta!');//mensagem erro de senha
     }
 });
 
@@ -145,3 +145,33 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
 function alternarEnergia() {
     celularLigado = !celularLigado; // Alterna o estado de energia
 }
+// ------------------------------------------
+
+var ligado = true;
+/*tive que fazer outro tela-preta quando usuario estiver na telaprincipal */
+document.querySelector('.power-button').addEventListener('click', function() {
+    if (ligado) {
+        document.querySelector('.tela-preta').style.display = 'block';
+        setTimeout(function() {
+            location.reload();
+        }, 5000); // Atraso de 3 segundo antes de recarregar,porem liga o celular
+        ligado = false;
+    } else {
+        setTimeout(function() {
+            document.querySelector('.tela-preta').style.display = 'none';
+            ligado = true;
+        }, 10000); // tempo de ligamento
+    }
+});
+//------------------------------------------
+
+document.getElementById('mensagem').addEventListener('click', function() {
+    var msgEscondida = document.querySelector('.msg-escondida');
+    if (msgEscondida.style.display === 'none' || msgEscondida.style.display === '') {
+        msgEscondida.style.display = 'block'; //mostra os icon da notificação,na tela principal
+    } else {
+        msgEscondida.style.display = 'none';
+    }
+});
+//------------------------------------------
+
