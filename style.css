@@ -338,7 +338,7 @@ div#pesquisa{
     height: 20px;
     color: #0000004b;
 }
-
+/*--------------------------*/
 .mensagem{
    position: absolute;
    top: 10%;
@@ -374,4 +374,4 @@ p#mensagem{
     margin-top: 12px;
     cursor: pointer;
 }
-
+/*---------------------------*/
