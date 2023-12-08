@@ -69,7 +69,7 @@ function togglePower() { //primeria interface some quando desliga,e reaparece qu
             horas.style.display = 'none';
             notificacao.style.display = 'none';
             updateScreen();
-        }, 200);
+        }, 200); //tempo desligamento
 
     } else {
         powerOn = true;
@@ -106,26 +106,42 @@ function atualizarRelogio() {
 atualizarRelogio();
 /*------------------------------------------*/
 
-document.getElementById('screen').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'flex';
-});
-//overlay quando clica na tela,aparece pedindo a senha
-document.getElementById('passwordForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // impede o envio do formulário
-    var password = document.getElementById('password').value;
-    if (password === '0000') { // 'senha correta' escolha sua senha
-        document.getElementById('overlay').style.display = 'none';
-    } else {
-        alert('Senha incorreta!');
-    }
-});
-var passwordForm = document.getElementById('passwordForm');
+//-----------------------------------------------------------------
 
-// Em seguida, adicione um evento de clique ao elemento de sobreposição
-overlay.addEventListener('click', function(event) {
-    // Verifique se o clique foi fora do formulário de senha
-    if (event.target === overlay) {
-        // Se sim, esconda a sobreposição
-        overlay.style.display = 'none';
+var celularLigado = true; 
+var sobreposicao = document.getElementById('overlay');
+var tela = document.getElementById('screen');
+var formularioSenha = document.getElementById('passwordForm');
+
+tela.addEventListener('click', function() {
+    if (celularLigado) { // Só alterna a sobreposição se o celular estiver ligado
+        if (sobreposicao.style.display === 'none' || sobreposicao.style.display === '') {
+            sobreposicao.style.display = 'flex';
+        } else {
+            sobreposicao.style.display = 'none';
+        }
     }
 });
+
+formularioSenha.addEventListener('click', function(event) {
+    event.stopPropagation(); // Impede que o evento de clique se propague para a tela
+});
+
+document.getElementById('passwordForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var senha = document.getElementById('password').value;
+    var telaPrincipal = document.getElementsByClassName('telaprincipal')[0];//mostra telaprincipal
+    var notificacao = document.getElementsByClassName('notificacao')[0];//remove notificação
+    if (senha === '0000') { //definir senha, vc pode escolher
+        sobreposicao.style.display = 'none';
+        telaPrincipal.style.display = 'block';
+        notificacao.style.display = 'none';
+    } else {
+        alert('Senha incorreta!');//mensagem
+    }
+});
+
+// Supondo que você tenha uma função para alternar o estado de energia do celular
+function alternarEnergia() {
+    celularLigado = !celularLigado; // Alterna o estado de energia
+}
