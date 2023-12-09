@@ -175,3 +175,20 @@ document.getElementById('mensagem').addEventListener('click', function() {
 });
 //------------------------------------------
 
+var container = document.querySelector('.paimenu');
+var submenu = document.querySelector('.submenu');
+var relogio = document.getElementById('Relogio');
+
+container.addEventListener('mouseover', function() {
+    submenu.style.display = 'block';
+    submenu.style.transition = 'all 0.5s'; 
+    relogio.style.display = 'none';
+}); //remove relogio quando abrir submenu
+
+container.addEventListener('mouseout', function() {
+    submenu.style.transition = 'all 0.5s'; 
+    submenu.style.display = 'none';
+    relogio.style.display = 'block';
+});
+/*---------------------------------------------------------- */
+

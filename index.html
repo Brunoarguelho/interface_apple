@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple</title>
+    <title>smartfone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon/favicon-apple.png" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -63,16 +64,39 @@
                     <ion-icon name="search-outline" id="pesquisa-icon"></ion-icon>
                     <input type="text" id="pesquisa-input" placeholder="Search">
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div class="app-interface">
+                    <img src="imagem/app01.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app02.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app09.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app04.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app10.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app06.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app07.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app08.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app03.png" alt="app apple" class="app-toque">
+                    <img src="imagem/app11.png" alt="app apple" class="app-toque">
+                </div>
+                <div class="paimenu">
+                    <div id="abir-subbarra"></div>
+                    <div class="submenu">
+                        <ion-icon name="chevron-collapse-outline" id="abri-fecha"></ion-icon>
+                       <div id="app-sub">
+                          <!-- colocar app -->
+                       </div>
+                       <div id="brilho-volume">
+                        <div id="brilho-sub"></div>
+                        <div id="volume-sub"></div>
+                       </div>
+                    </div>
+                   
+                </div>
             </div>
-            <div class="tela-preta"></div>
-            <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power
-            foi metodo que crie pra concertar bug de sobreposição que tava dando.
-            pasta javascript linha"150 a 165"
-            -->
+            <div class="tela-preta">
+                    <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power
+                    foi metodo que crie pra concertar bug de sobreposição que tava dando.
+                    pasta javascript linha"150 a 165"
+                    -->
+            </div>
         </div>
         <div class="volume-buttons">
             <div class="volume-button" onclick="decreaseVolume()"></div> <!--volume + -->
