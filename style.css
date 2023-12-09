@@ -433,10 +433,133 @@ p#mensagem{
 
 #abri-fecha{
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 25px;
     color: #fff;
 }
 
+.conf-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#data {
+    font-size: 1em;
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    transform: translate(0%, -0%);
+    color: #fff;
+}
+
+#confi{
+    font-size: 1.1em;
+    color: #fff;
+    position: absolute;
+    top: 8%;
+    right: 6%;
+    transform: translate(0%, -0%);
+    cursor: pointer;
+}
+
+.icon-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.app-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:  #80808074;
+}
+
+.centro-icon{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    margin-left: 11px;
+    color: #a1a1a1;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.centro-icon:active{
+    transform: scale(1.1);
+}
+
+#modo-aviao{
+    transform: rotate(-90deg);
+}
+
+.blue{
+    background-color: blue;
+}
+/*-------------------------------*/
+
+#brilho {
+    width: 100%;
+    height: 18px;
+    background: blue;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50px;
+    top: 22%;
+}
+  
+#brilho .brilhos {
+    height: 100%;
+    position: absolute;
+    background: gray;
+    border-radius: 1px;
+    width: 0%;
+}
+
+#brilho .brilho-sub {
+    width: 4px;
+    height: 100%;
+    background: #333;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+#brilho-icon{
+    color: #fff;
+    font-size: 1.1em;
+    margin-left: 5px;
+}
+/*--------------------------------*/
+
+#contro-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 17%;
+}
+
+.entrada, .saida{
+    color: #a1a1a1;
+    background-color: #0000003f;
+    border-radius: 50px;
+    padding: 15px 12px;
+    cursor: pointer;
+}
+
+.entrada, .saida >p{
+    text-align: center;
+    font-size: small;
+}

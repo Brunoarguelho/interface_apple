@@ -192,3 +192,49 @@ container.addEventListener('mouseout', function() {
 });
 /*---------------------------------------------------------- */
 
+var data = new Date(); //infroma data
+var options = { weekday: 'short', day: 'numeric', month: 'short' };
+var formattedDate = new Intl.DateTimeFormat('pt-BR', options).format(data);
+document.getElementById('data').innerHTML = formattedDate;
+
+/*-------------------------------------------------------------*/
+
+var appIcons = document.querySelectorAll('.app-icon');
+ //app do submenu
+// Função para adicionar o evento de clique
+function addClickEvent(icon) {
+    icon.addEventListener('click', function() {
+        // Se o ícone tem a classe 'blue', remove a classe
+        if (this.classList.contains('blue')) {
+            this.classList.remove('blue');
+        }
+        // Se o ícone não tem a classe 'blue', adiciona a classe
+        else {
+            this.classList.add('blue');
+        }
+    });
+}
+
+// Adiciona um evento de clique a cada ícone de app-icon
+appIcons.forEach(addClickEvent);
+
+/*-------------------------------------------------------------*/
+
+var slider = document.getElementById("brilho");
+var bar = slider.querySelector(".brilhos");
+var handle = slider.querySelector(".brilho-sub");
+
+slider.addEventListener("mousedown", function(event) {
+  document.addEventListener("mousemove", move);
+  document.addEventListener("mouseup", function() {
+    document.removeEventListener("mousemove", move);
+  });
+
+  function move(event) {
+    var rect = slider.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var width = Math.min(rect.width, Math.max(0, x));
+    var percentage = width / rect.width * 100;
+    bar.style.width = percentage + "%";
+  }
+});
