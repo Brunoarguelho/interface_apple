@@ -125,19 +125,20 @@ tela.addEventListener('click', function() {
 
 formularioSenha.addEventListener('click', function(event) {
     event.stopPropagation(); // Impede que o evento de clique se propague para a tela
-});
+}); // quando o celular tiver desligado
 
+/*------------------------------------------------ */
 document.getElementById('passwordForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var senha = document.getElementById('password').value;
     var telaPrincipal = document.getElementsByClassName('telaprincipal')[0];//mostra telaprincipal
     var notificacao = document.getElementsByClassName('notificacao')[0];//remove notificação
-    if (senha === '0000') { //definir senha, vc pode escolher
+    if (senha === '0000') { //definir senha, vc pode escolher!
         sobreposicao.style.display = 'none';
         telaPrincipal.style.display = 'block';
         notificacao.style.display = 'none';
     } else {
-        alert('Senha incorreta!');//mensagem erro de senha
+        alert('Senha incorreta!');//mensagem de erro da senha!
     }
 });
 
@@ -154,7 +155,7 @@ document.querySelector('.power-button').addEventListener('click', function() {
         document.querySelector('.tela-preta').style.display = 'block';
         setTimeout(function() {
             location.reload();
-        }, 5000); // Atraso de 3 segundo antes de recarregar,porem liga o celular
+        }, 5000); // Atraso de 5 segundo antes de recarregar,porem liga o celular
         ligado = false;
     } else {
         setTimeout(function() {
@@ -192,7 +193,7 @@ container.addEventListener('mouseout', function() {
 });
 /*---------------------------------------------------------- */
 
-var data = new Date(); //infroma data
+var data = new Date(); //informa a data
 var options = { weekday: 'short', day: 'numeric', month: 'short' };
 var formattedDate = new Intl.DateTimeFormat('pt-BR', options).format(data);
 document.getElementById('data').innerHTML = formattedDate;
@@ -212,9 +213,8 @@ function addClickEvent(icon) {
         else {
             this.classList.add('blue');
         }
-    });
+    }); //app seleção do celular
 }
-
 // Adiciona um evento de clique a cada ícone de app-icon
 appIcons.forEach(addClickEvent);
 
@@ -223,7 +223,7 @@ appIcons.forEach(addClickEvent);
 var slider = document.getElementById("brilho");
 var bar = slider.querySelector(".brilhos");
 var handle = slider.querySelector(".brilho-sub");
-
+//barra de brilho do cell,porem sem o efeito
 slider.addEventListener("mousedown", function(event) {
   document.addEventListener("mousemove", move);
   document.addEventListener("mouseup", function() {
@@ -253,4 +253,4 @@ function expand(id) {
       }
     });
   }
-  /*----------------------------------------------------------- */
+/*----------------------------------------------------------- */

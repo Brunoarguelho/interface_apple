@@ -416,7 +416,7 @@ p#mensagem{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 98%;
+    height: 99.5%;
     background-color: #333;
     animation-name: devagar;
     animation-duration: 1s;
@@ -556,22 +556,51 @@ p#mensagem{
     font-size: small;
 }
 
+/*-------------------------*/
 .sub-notificacao{
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 47%;
+    margin-top: 125px;
 }
 
-.noti{
+.noti{ /*balão de notificação*/
     width: 99%;
     height: 70px;
     background-color:  #80808074;
     border-radius: 10px;
     margin-bottom: 3px;
-    padding-top: 50px;
     transition: all 0.2s ease;
-    z-index: 999;
+}
+
+.men-data-seta{
+    color: #fff;
+    padding-top: 1px;
+    margin-left: 4px;
+}
+
+.juntos{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
+}
+
+.msg-noti{
+    font-size: 1em;
+    background-color: #2d2d2d;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.seta-noti{
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.noti >span{
+    color: #fff;
+    font-size: small;
+    margin-left: 30px;
 }
 
 .noti.expancao {
@@ -585,49 +614,19 @@ p#mensagem{
   .noti.expancao span.extra {
     display: block;
 }
-
-.noti >span{
-    font-size: small;
-    color: #fff;
-    width: 100%;
-    white-space: nowrap;
-    position: relative;
-    top: -25px;
-    left: 30px;
+#e1{
+    color: tomato;
 }
 
-.men-data-seta1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    gap: 140px;
-    font-size: small;
-    color: #fff;
+#w1{
+    color: #128C7E;
 }
 
-#msg-noti1{ /*icon noti email*/
-    font-size: 1.1em;
-    position: relative;
-    top: 1px;
-    margin-right: 8px;
-    background-color: #2d2d2d;
-    padding: 5px;
-    border-radius: 50%;
-}
-#junto01{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#i1{
+    color: #e1306c;
 }
 
-.seta-noti{
-    position: absolute;
-    top: 4px;
-    right: -120px;
-    cursor: pointer;
-    color: #fff;
+#t1{
+    color: #6441a5;
 }
-
+/*-------------------------------*/

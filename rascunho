@@ -16,4 +16,152 @@
                 <div class="volume-button" onclick="decreaseVolume()"></div>
             </div>
         <div class="button-desliga" onclick="changeColor()"></div>
+        </div>
+
+<!-- ---------------------------------------------------- -->
+
+
+<div class="noti" id="noti1">
+    <div class="men-data-seta1">
+        <p id="junto01">
+          <ion-icon name="mail-outline" id="msg-noti1"></ion-icon>
+          Mensagem  10/12/2023<button onclick="expand('noti1')">
+          <ion-icon name="chevron-down-outline" class="seta-noti">
+          </ion-icon></button>
+        </p>
     </div>
+    <span>Lorem ipsum dolor sit, amet consectetur...</span>
+    <span>Lorem ipsum dolor sit, amet consectetur...</span>
+    <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+    <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+
+<div class="men-data-seta2">
+    <p id="junto02">
+      <ion-icon name="logo-whatsapp"id="msg-noti2"></ion-icon>
+      Mensagem não lidas<button onclick="expand('noti2')">
+      <ion-icon name="chevron-down-outline" class="seta-noti" id="seta-noti1">
+      </ion-icon></button>
+    </p>
+</div>
+<span>Lorem ipsum dolor sit, amet consectetur...</span>
+<span>Lorem ipsum dolor sit, amet consectetur...</span>
+<span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+<span class="extra">Lorem ipsum dolor sit, amet consectetur...</span> 
+
+<!-- -------------------------------------- -->
+
+<div class="noti" id="noti1">
+    <div class="men-data-seta">
+        <p class="juntos">
+          <ion-icon name="mail-outline" class="msg-noti"></ion-icon>
+          Mensagem  10/12/2023<ion-icon name="chevron-down-outline" class="seta-noti" onclick="expand('noti1')">
+        </ion-icon>
+        </p>
+    </div>
+    <span>Lorem ipsum dolor sit, amet consectetur...</span>
+    <span>Lorem ipsum dolor sit, amet consectetur...</span>
+    <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+    <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+</div>
+ <div class="noti" id="noti2">
+      <!-- Conteúdo da notificação 3 -->
+ </div> 
+  <div class="noti" id="noti3">
+    <!-- Conteúdo da notificação 3 -->
+  </div>
+  <div class="noti" id="noti4">
+    <!-- Conteúdo da notificação 4 -->
+  </div>
+</div>
+
+.noti{
+    width: 99%;
+    height: 70px;
+    background-color:  #80808074;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    padding-top: 50px;
+    transition: all 0.2s ease;
+}
+
+#noti2 >span{
+   position: relative;
+   top: -48px;
+}
+
+.noti.expancao {
+    height: 110px;
+}
+
+.noti span.extra {
+    display: none;
+}
+  
+  .noti.expancao span.extra {
+    display: block;
+}
+
+.noti >span{
+    font-size: small;
+    color: #fff;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    top: -25px;
+    left: 30px;
+}
+
+.men-data-seta1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    gap: 140px;
+    font-size: small;
+    color: #fff;
+}
+
+.men-data-seta2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    left: -61px;
+    font-size: small;
+    color: #fff;
+}
+
+#msg-noti1, #msg-noti2{ /*icon noti email*/
+    font-size: 1.1em;
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+    background-color: #2d2d2d;
+    padding: 5px;
+    border-radius: 50%;
+}
+#junto01, #junto02{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.seta-noti{
+    position: absolute;
+    top: 4px;
+    right: -120px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#seta-noti1{
+    position: relative;
+    top: 1px;
+    right: -122px;
+    cursor: pointer;
+    color: #fff;
+}
+

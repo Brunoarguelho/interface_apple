@@ -78,6 +78,7 @@
                 </div>
                 <div class="paimenu">
                     <div id="abir-subbarra"></div>
+
                     <div class="submenu">
                         <div class="conf-date">
                             <div id="data"></div> <!--informa data-->
@@ -121,52 +122,69 @@
                           <p>Saída de mídia</p>
                         </div>
                        </div>
-                       <div class="sub-notificacao">
-                         <div class="noti" id="noti1">
-                            <div class="men-data-seta1">
-                                <p id="junto01">
-                                  <ion-icon name="mail-outline" id="msg-noti1"></ion-icon>
-                                  Mensagem  10/12/2023<button onclick="expand('noti1')">
-                                  <ion-icon name="chevron-down-outline" class="seta-noti">
-                                  </ion-icon></button>
+                      <div class="sub-notificacao">
+                        <div class="noti" id="noti1">
+                            <div class="men-data-seta">
+                                <p class="juntos">
+                                    <ion-icon name="mail-outline" class="msg-noti" id="e1"></ion-icon>
+                                    Mensagem  25/12/2023<ion-icon name="chevron-down-outline" class="seta-noti" onclick="expand('noti1')">
+                                  </ion-icon>
                                 </p>
                             </div>
                             <span>Lorem ipsum dolor sit, amet consectetur...</span>
                             <span>Lorem ipsum dolor sit, amet consectetur...</span>
                             <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
                             <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
-                         </div> <!--noti, noti1-->
-                         <div class="noti" id="noti2">
-                                <!-- <div class="men-data-seta2">
-                                    <p id="junto02">
-                                      <ion-icon name="logo-whatsapp"id="msg-noti2"></ion-icon>
-                                      Mensagem não lidas<button onclick="expand('noti2')">
-                                      <ion-icon name="chevron-down-outline" class="seta-noti1" id="seta-noti1">
-                                      </ion-icon></button>
-                                    </p>
-                                </div>
-
-                                <span>Lorem ipsum dolor sit, amet consectetur...</span>
-                                <span>Lorem ipsum dolor sit, amet consectetur...</span>
-                                <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
-                                <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span> -->
-                         </div> 
-                          <div class="noti" id="noti3">
-                            <!-- Conteúdo da notificação 3 -->
-                          </div>
-                          <div class="noti" id="noti4">
-                            <!-- Conteúdo da notificação 4 -->
-                          </div>
-                       </div>
+                        </div>
+                        <div class="noti" id="noti2">
+                            <div class="men-data-seta">
+                                <p class="juntos">
+                                    <ion-icon name="logo-whatsapp" class="msg-noti" id="w1"></ion-icon>
+                                    Mensagem  25/12/2023<ion-icon name="chevron-down-outline" class="seta-noti" onclick="expand('noti2')">
+                                  </ion-icon>
+                                </p>
+                            </div>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                        </div>
+                        <div class="noti" id="noti3">
+                            <div class="men-data-seta">
+                                <p class="juntos">
+                                    <ion-icon name="logo-instagram" class="msg-noti" id="i1"></ion-icon>
+                                    Mensagem  31/12/2023<ion-icon name="chevron-down-outline" class="seta-noti" onclick="expand('noti3')">
+                                  </ion-icon>
+                                </p>
+                            </div>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                        </div>
+                        <div class="noti" id="noti4">
+                            <div class="men-data-seta">
+                                <p class="juntos">
+                                    <ion-icon name="logo-twitch" class="msg-noti" id="t1"></ion-icon>
+                                    Mensagem  31/12/2023<ion-icon name="chevron-down-outline" class="seta-noti" onclick="expand('noti4')">
+                                  </ion-icon>
+                                </p>
+                            </div>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span>Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                            <span class="extra">Lorem ipsum dolor sit, amet consectetur...</span>
+                        </div>
+                      </div>
                     </div> <!--submenu-->
-                </div>
+                </div> <!--paimenu-->
             </div>
             <div class="tela-preta">
                     <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power
                     foi metodo que crie pra concertar bug de sobreposição que tava dando.
                     pasta javascript linha"150 a 165"
                     -->
-            </div>
+            </div> <!--tela preta-->
         </div>
         <div class="volume-buttons">
             <div class="volume-button" onclick="decreaseVolume()"></div> <!--volume + -->
