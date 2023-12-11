@@ -563,7 +563,7 @@ p#mensagem{
     margin-top: 125px;
 }
 
-.noti{ /*balão de notificação*/
+.noti{
     width: 99%;
     height: 70px;
     background-color:  #80808074;
@@ -614,6 +614,7 @@ p#mensagem{
   .noti.expancao span.extra {
     display: block;
 }
+
 #e1{
     color: tomato;
 }
@@ -630,3 +631,4 @@ p#mensagem{
     color: #6441a5;
 }
 /*-------------------------------*/
+
