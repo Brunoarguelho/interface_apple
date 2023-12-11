@@ -238,3 +238,19 @@ slider.addEventListener("mousedown", function(event) {
     bar.style.width = percentage + "%";
   }
 });
+/*-------------------------------------------------------------*/
+function expand(id) {
+    var notis = document.querySelectorAll('.noti');
+    notis.forEach(function(noti) {
+      if (noti.id === id) { //aumenta barra de notificação dentro do submenu,quando clicar na seta.
+        if (noti.classList.contains('expancao')) {
+          noti.classList.remove('expancao'); //div de expanção esta dentro do css,
+        } else {
+          noti.classList.add('expancao');//div de expanção esta dentro do css,
+        }
+      } else {
+        noti.classList.remove('expancao');//div de expanção esta dentro do css,
+      }
+    });
+  }
+  /*----------------------------------------------------------- */
