@@ -9,9 +9,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
- <!-- 
-
-  -->
 <body>
     <div class="container">
         
@@ -43,7 +40,7 @@
                 <div class="volume-icon" id="volume-icon"></div> <!-- O ícone de volume foi movido para dentro do indicador de volume -->
                 <div class="volume-bar" id="volume-bar"></div>
             </div>
-        
+           <!-------------------------------------------->
             <div class="screen" id="screen">
                 
                 <div id="overlay" style="display: none;">
@@ -53,7 +50,9 @@
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </form>
                 </div>
+
             </div>
+            
             <div class="telaprincipal"> <!--tela principal do smartfone-->
                 <div class="mensagem"> <!--notificação do cell-->
                     <p id="mensagem">Notificação</p>
@@ -79,8 +78,9 @@
                     <img src="imagem/app08.png" alt="app apple" class="app-toque">
                     <img src="imagem/app03.png" alt="app apple" class="app-toque">
                     <img src="imagem/app11.png" alt="app apple" class="app-toque">
+
                 </div>
-                <div class="paimenu">
+                <div class="paimenu"> <!--div pai da sub-barra-->
                     <div id="abir-subbarra"></div>
 
                     <div class="submenu">
@@ -182,21 +182,32 @@
                       </div>
                     </div> <!--submenu-->
                 </div> <!--paimenu-->
-            </div>
+<!--------------------------------------------------------------------------->
+                <div class="blocos-menu"> <!--tela de menu-->
+                    <div class="blocos"></div>
+                </div> <!--tela dos appp-->
+                <div id="novaTela">
+                    <!-- Conteúdo da nova tela vai aqui -->
+                </div>
+<!--------------------------------------------------------------------------->
+            </div> <!--tela principal-->
+
             <div class="tela-preta">
                     <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power
                     foi metodo que crie pra concertar bug de sobreposição que tava dando.
                     pasta javascript linha"150 a 165"
                     -->
             </div> <!--tela preta-->
-        </div>
+
+        </div> <!--iphone-->
         <div class="volume-buttons">
             <div class="volume-button" onclick="decreaseVolume()"></div> <!--volume + -->
             <div class="volume-button" onclick="increaseVolume()"></div> <!--volume - -->
 
             <div class="power-button" onclick="togglePower()"></div> <!--botão power-->
         </div>
-    </div>
+
+    </div> <!--container-->
 </body>
 <script src="interface.js"></script>
 </html>

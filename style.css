@@ -242,6 +242,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: none; /* O ícone de volume está oculto inicialmente */
+    background-color: #fff;
+    border-radius: 30%;
+    border: 1px solid #c715c7;
 }
 
 .power-button{
@@ -623,7 +626,43 @@ p#mensagem{
   .noti.expancao span.extra {
     display: block;
 }
+/*-------------------------------*/
+.blocos-menu{
+    position: relative;
+}
 
+.blocos{ /*vai abrir tela de menu*/
+    width: 20%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: rgb(229, 50, 229);
+    position: absolute;
+    top: 585px;
+    left: 125px;
+    cursor: pointer;
+    z-index: 99; /*teste, para evitar sobreposição*/
+}
+
+#novaTela {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 1, 0.927); /* Fundo embasado */
+    display: none;
+}
+
+#novaTela::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.829); /* Fundo embasado */
+    filter: blur(5px); /* Desfoque */
+}
 /*-------------------------------*/
 
 @media screen and (min-width: 1024px) {/*desktop medio a grande*/

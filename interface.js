@@ -26,7 +26,7 @@ function togglePower() {
         }, 200); //tempo para ligar e desligar o celular
     } else {
         powerOn = true;
-        screen.style.backgroundImage = "url('imagem/fundo-iphpne.jpg')"; // Adicione esta linha
+        screen.style.backgroundImage = "url('imagem/fundo-iphpne.jpg')"; 
         updateScreen();
     }
 }
@@ -179,18 +179,22 @@ document.getElementById('mensagem').addEventListener('click', function() {
 var container = document.querySelector('.paimenu');
 var submenu = document.querySelector('.submenu');
 var relogio = document.getElementById('Relogio');
-
+var blocos = document.querySelector('.blocos'); 
+ //quando abrir submenu,terá!
 container.addEventListener('mouseover', function() {
-    submenu.style.display = 'block';
-    submenu.style.transition = 'all 0.5s'; 
-    relogio.style.display = 'none';
-}); //remove relogio quando abrir submenu
+    submenu.style.display = 'block'; //mostra
+    submenu.style.transition = 'all 0.5s'; //tempo de mostra
+    relogio.style.display = 'none'; //remove relogio
+    blocos.style.display = 'none';  //remove butao de abrir menu app
+}); 
 
 container.addEventListener('mouseout', function() {
     submenu.style.transition = 'all 0.5s'; 
     submenu.style.display = 'none';
     relogio.style.display = 'block';
+    blocos.style.display = 'block'; 
 });
+
 /*---------------------------------------------------------- */
 
 var data = new Date(); //informa a data
@@ -255,4 +259,20 @@ function expand(id) {
   }
 /*----------------------------------------------------------- */
 
+var novaTela = document.getElementById('novaTela');
+var blocos = document.querySelector('.blocos');
+var relogio = document.getElementById('Relogio'); 
 
+// Inicialmente, defina o display de novaTela como 'none'
+novaTela.style.display = 'none';
+//mostra a aba de app gerais do celular
+blocos.addEventListener('click', function() {
+    if (novaTela.style.display === 'none') {
+        novaTela.style.display = 'block';
+        relogio.style.display = 'none'; //remove relogio
+    } else {
+        novaTela.style.display = 'none';
+        relogio.style.display = 'block'; //mostra relogio
+    }
+});
+/*------------------------------------------------------------*/
