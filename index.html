@@ -11,37 +11,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        
+    <div class="container"> 
         <img src="imagem/iphone-tras.png" id="img-apple-tras" alt="iphone 12">
-
+        <!-- imagem da iphone, da parte de trás -->
         <div class="iphone">
             <div class="case" id=case>
                 <img src="imagem/img-carema.png" alt="lente camera">
-            </div>
+                <!-- img da camera frontal -->
+            </div> <!--case-->
             <div class="wifi-bateria">
                 <ion-icon name="wifi-outline" id="wifi"></ion-icon>
                 <ion-icon name="battery-full-outline" id="bateria"></ion-icon>
-            </div>
+            </div> <!--wifi-bateria-->
             <div class="barra-rede">
                 <ion-icon name="cellular-outline" id="rede"></ion-icon>
                 <p id="telmovel">TM</p>
-            </div>
+            </div> <!--barra-rede-->
              <div class="horas">
                 <p id="Relogio"></p>
-             </div>
+             </div> <!--horas-->
              <div class="notificacao">
                 <ion-icon name="logo-whatsapp" id="whats"></ion-icon>
                 <ion-icon name="logo-instagram" id="insta"></ion-icon>
                 <ion-icon name="logo-facebook" id="face"></ion-icon>
                 <ion-icon name="chatbox-ellipses-outline" id="balao"></ion-icon>
-             </div>
-            <!-- ------------------------------------ -->
+             </div> <!--notificaçães-->
             <div class="volume-indicator" id="volume-indicator">
                 <div class="volume-icon" id="volume-icon"></div> <!-- O ícone de volume foi movido para dentro do indicador de volume -->
                 <div class="volume-bar" id="volume-bar"></div>
-            </div>
-           <!-------------------------------------------->
+            </div> <!--volume-indicador-->
             <div class="screen" id="screen">
                 
                 <div id="overlay" style="display: none;">
@@ -51,10 +49,8 @@
                         <ion-icon name="lock-closed-outline"></ion-icon>
                     </form>
                 </div>
-
-            </div>
-            
-            <div class="telaprincipal"> <!--tela principal do smartfone-->
+            </div> <!--screen-->
+    <div class="telaprincipal"> <!--tela principal do smartfone-->
                 <div class="mensagem"> <!--notificação do cell-->
                     <p id="mensagem">Notificação</p>
                     <div class="msg-escondida">
@@ -63,11 +59,11 @@
                         <ion-icon name="logo-facebook" class="icon02" id="face"></ion-icon>
                         <ion-icon name="logo-tiktok" class="icon02" id="tiktok"></ion-icon>
                     </div>
-                </div>
+                </div> <!--mensagem-->
                 <div id="pesquisa">
                     <ion-icon name="search-outline" id="pesquisa-icon"></ion-icon>
                     <input type="text" id="pesquisa-input" placeholder="Search">
-                </div>
+                </div> <!--pesquisa-->
                 <div class="app-interface">
                     <img src="imagem/app01.png" alt="app apple" class="app-toque">
                     <img src="imagem/app02.png" alt="app apple" class="app-toque">
@@ -79,10 +75,9 @@
                     <img src="imagem/app08.png" alt="app apple" class="app-toque">
                     <img src="imagem/app03.png" alt="app apple" class="app-toque">
                     <img src="imagem/app11.png" alt="app apple" class="app-toque">
-                </div>
+                </div> <!--app-interface-->
                 <div class="paimenu"> <!--div pai da sub-barra-->
                     <div id="abir-subbarra"></div>
-
                     <div class="submenu">
                         <div class="conf-date">
                             <div id="data"></div> <!--informa data-->
@@ -182,70 +177,206 @@
                       </div>
                     </div> <!--submenu-->
                 </div> <!--paimenu-->
-<!--------------------------------------------------------------------------->
                 <div class="blocos-menu"> <!--tela de menu-->
                     <div class="blocos"></div>
                 </div> <!--tela dos appp-->
-                <div id="novaTela">
-                    <div class="inf-pesquisa">
-                        <h3 id="inf-nome">Contato</h3>
-                        <div class="icon-elementos">
-                            <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
-                            <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
-                            <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
-                        </div>
-                    </div>
-                        <div class="app-apple">
-                            <img src="imagem/app01.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app02.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app09.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app04.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app10.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app06.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app07.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app08.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app03.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app04.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app05.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app10.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app14.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app08.png" alt="app apple" class="app-toque1">
-                            <img src="imagem/app16.png" alt="app apple" class="app-toque1">
-                        </div>
-                        <!--app-apple-->
-                        <div class="comandos">
-                            <div class="comandos-icon">
-                                <ion-icon name="chatbubble-ellipses-outline" id="primeiro-icon" class="icon-interagir active"></ion-icon>
-                                <ion-icon name="globe-outline" class="icon-interagir"></ion-icon>
-                                <ion-icon name="game-controller-outline" class="icon-interagir"></ion-icon>
-                                <ion-icon name="musical-notes-outline" class="icon-interagir"></ion-icon>
-                                <ion-icon name="sparkles-outline" class="icon-interagir"></ion-icon>
-                                <ion-icon name="settings-outline" class="icon-interagir"></ion-icon>
-                                <div class="barra"></div>
-                            </div>  
-                           
-                        </div> <!--comandos-->
-                        
-                </div> <!--nova-tela-->
-                <!-- continuar -->
-<!--------------------------------------------------------------------------->
-            </div> <!--tela principal-->
+          <div id="novaTela">
+             <div class="container2">
+                        <div class="tela ativa"> <!--primeira tela-->
+                        <div class="inf-pesquisa">
+                            <h3 class="inf-nome">Contato</h3>
+                            <div class="icon-elementos">
+                                <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                            </div>
+                            </div>
+                            
+                            <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>   
+                        </div> 
+                        <div class="tela"> <!--segunda tela-->
+                            <div class="inf-pesquisa">
+                                <h3 class="inf-nome">Internet</h3>
+                                <div class="icon-elementos">
+                                    <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                                </div>
+                             </div>
 
+                             <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>
+                        </div>
+                        <div class="tela"> <!--terceria tela-->
+                            <div class="inf-pesquisa">
+                                <h3 class="inf-nome">Jogos</h3>
+                                <div class="icon-elementos">
+                                    <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                                </div>
+                             </div>
+
+                             <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>
+                        </div>
+                        <div class="tela"> <!--quarta tela-->
+                            <div class="inf-pesquisa">
+                                <h3 class="inf-nome">Multimídia</h3>
+                                <div class="icon-elementos">
+                                    <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                                </div>
+                             </div>
+
+                             <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>
+                        </div>
+                        <div class="tela"> <!--quinta tela-->
+                            <div class="inf-pesquisa">
+                                <h3 class="inf-nome">Ultilitários</h3>
+                                <div class="icon-elementos">
+                                    <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                                </div>
+                             </div>
+
+                             <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>
+                        </div>
+                        <div class="tela"> <!--sexta tela-->
+                            <div class="inf-pesquisa">
+                                <h3 class="inf-nome">Configuração</h3>
+                                <div class="icon-elementos">
+                                    <ion-icon name="search-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="lock-closed-outline" class="icon-inf-pesquisa"></ion-icon>
+                                    <ion-icon name="ellipsis-vertical-outline" class="icon-inf-pesquisa"></ion-icon>
+                                </div>
+                             </div>
+
+                             <div class="app-apple">
+                                <img src="imagem/app01.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app02.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app09.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app06.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app07.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app03.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app04.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app05.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app10.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app14.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app08.png" alt="app apple" class="app-toque1">
+                                <img src="imagem/app16.png" alt="app apple" class="app-toque1">
+                            </div>
+                        </div>  
+                </div> <!--container2--> 
+                <div class="comandos">
+                    <div class="comandos-icon">
+                        <ion-icon name="chatbubble-ellipses-outline" id="primeiro-icon" class="icon-interagir active"></ion-icon>
+                        <ion-icon name="globe-outline" class="icon-interagir"></ion-icon>
+                        <ion-icon name="game-controller-outline" class="icon-interagir"></ion-icon>
+                        <ion-icon name="musical-notes-outline" class="icon-interagir"></ion-icon>
+                        <ion-icon name="sparkles-outline" class="icon-interagir"></ion-icon>
+                        <ion-icon name="settings-outline" class="icon-interagir"></ion-icon>
+                        <div class="barra"></div>
+                    </div> <!--barra de icon de pre seleção-->      
+                </div> <!--comandos-->
+            </div> <!--nova-tela-->
+    </div> <!--tela principal-->
             <div class="tela-preta">
                     <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power
                     foi metodo que crie pra concertar bug de sobreposição que tava dando.
                     pasta javascript linha"150 a 165"
                     -->
-            </div> <!--tela preta-->
-
-        </div> <!--iphone-->
+            </div> 
+    </div> <!--iphone-->
         <div class="volume-buttons">
             <div class="volume-button" onclick="decreaseVolume()"></div> <!--volume + -->
             <div class="volume-button" onclick="increaseVolume()"></div> <!--volume - -->
 
             <div class="power-button" onclick="togglePower()"></div> <!--botão power-->
         </div>
-
     </div> <!--container-->
 </body>
 <script src="interface.js"></script>

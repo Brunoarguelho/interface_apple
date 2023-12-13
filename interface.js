@@ -288,6 +288,16 @@ document.addEventListener("DOMContentLoaded", function() {
         barra.style.width = icon.offsetWidth + 'px';
         barra.style.left = icon.offsetLeft + 'px';
       });
-    });//barra de interação dos icon na nova-tela
-  }); //é a barra laranja em baixo dos icon de navegação
+    });
+  
+    var telas = document.querySelectorAll('.tela');
+    icons.forEach(function(icon, index) {
+      icon.addEventListener('click', function() {
+        telas.forEach(function(tela) {
+          tela.classList.remove('ativa');
+        });
+        telas[index].classList.add('ativa');
+      });
+    });
+  }); //tela seleções das especilidade dos aplicativos
 /*------------------------------------------------------------ */

@@ -672,7 +672,7 @@ p#mensagem{
     height: 80vh;
 }
 
-#inf-nome{
+.inf-nome{
     margin-left: 5px;
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
@@ -751,6 +751,14 @@ p#mensagem{
 
 .app-toque1:hover{
     transform: translatey(-5px) scale(1.1);
+}
+/*-------------------------------------*/
+.tela {
+    display: none;
+}
+  
+  .tela.ativa {
+    display: block;
 }
 
 /*-------------------------------*/
