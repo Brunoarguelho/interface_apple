@@ -276,3 +276,18 @@ blocos.addEventListener('click', function() {
     }
 });
 /*------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function() {
+    var icons = document.querySelectorAll('.icon-interagir');
+    var barra = document.querySelector('.barra');
+    // Define a barra para o primeiro ícone assim que a página for carregada
+    var primeiroIcone = icons[0];
+    barra.style.width = primeiroIcone.offsetWidth + 'px';
+    barra.style.left = primeiroIcone.offsetLeft + 'px';
+    icons.forEach(function(icon, index) {
+      icon.addEventListener('click', function() {
+        barra.style.width = icon.offsetWidth + 'px';
+        barra.style.left = icon.offsetLeft + 'px';
+      });
+    });//barra de interação dos icon na nova-tela
+  }); //é a barra laranja em baixo dos icon de navegação
+/*------------------------------------------------------------ */

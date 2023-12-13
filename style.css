@@ -635,7 +635,7 @@ p#mensagem{
     width: 20%;
     height: 6px;
     border-radius: 5px;
-    background-color: rgb(229, 50, 229);
+    background-color: #e5a032;
     position: absolute;
     top: 585px;
     left: 125px;
@@ -663,6 +663,96 @@ p#mensagem{
     background-color: rgba(0, 0, 0, 0.829); /* Fundo embasado */
     filter: blur(5px); /* Desfoque */
 }
+
+.inf-pesquisa{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80vh;
+}
+
+#inf-nome{
+    margin-left: 5px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff78;
+}
+
+.icon-elementos{
+    position: absolute;
+    right: 0;
+    display: flex;
+    font-size: 24px;
+    color: #ffffff78;
+    gap: 15px;
+}
+
+.icon-inf-pesquisa{
+    cursor: pointer;
+}
+
+.comandos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 40px;
+    padding: 3px;
+    background-color: #3737379d;
+    border-radius: 10px;
+    position: relative;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.comandos-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    gap: 25px;
+    color: #ffa600;
+    font-weight: bold;
+    position: relative;
+}
+
+.icon-interagir{
+    cursor: pointer;
+}
+
+.barra {
+    width: 30px;
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    height: 4px;
+    border-radius: 3px;
+    background: #ffa600;
+    transition: all 0.2s ease-in-out;
+}
+
+.app-apple{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3, 70px);
+    margin-top: -260px;
+    margin-left: 5px;
+}
+
+.app-toque1{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.app-toque1:hover{
+    transform: translatey(-5px) scale(1.1);
+}
+
 /*-------------------------------*/
 
 @media screen and (min-width: 1024px) {/*desktop medio a grande*/
