@@ -1,7 +1,7 @@
 Resumo da interface de um celular da Apple.
-               
+
 Obs: Usando minha criatividade e colocando alguns produtos e imagens que não correspondem ao original do iPhone.
- ---------------------------------------------------------------------------------------------------------
+ --------------------------------------------------------------------------------------------------------
                                      Vamos começar
                                    __________________
    
