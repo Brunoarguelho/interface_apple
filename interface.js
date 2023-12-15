@@ -301,3 +301,45 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }); //tela seleções das especilidade dos aplicativos
 /*------------------------------------------------------------ */
+var currentNumber = '';
+//codigo da lógica da calculadora 
+function appendNumber(number) {
+    currentNumber += number;
+    document.getElementById('resultado').value = currentNumber;
+}
+
+function appendOperator(operator) {
+    currentNumber += operator;
+    document.getElementById('resultado').value = currentNumber;
+}
+
+function toggleSign() {
+    if (currentNumber.charAt(0) === '-') {
+        currentNumber = currentNumber.slice(1);
+    } else {
+        currentNumber = '-' + currentNumber;
+    }
+    document.getElementById('resultado').value = currentNumber;
+}
+
+function calculate() {
+    currentNumber = eval(currentNumber);
+    document.getElementById('resultado').value = currentNumber;
+}
+
+function clearResult() {
+    currentNumber = '';
+    document.getElementById('resultado').value = '';
+}
+
+document.getElementById('myimagem').addEventListener('click', function() {
+    document.getElementById('blackScreen').style.display = 'block';
+    document.querySelector('.blocos').style.display = 'none';
+});
+ //tela da calculadora
+ //exibir e ocutar
+document.getElementById('sair-calc').addEventListener('click', function() {
+    document.getElementById('blackScreen').style.display = 'none';
+    document.querySelector('.blocos').style.display = 'block';
+});
+/*--------------------------------------------------------------- */

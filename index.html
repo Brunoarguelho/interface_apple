@@ -303,7 +303,8 @@
                                 <img src="imagem/ult10.png" alt="app apple" class="app-toque1">       
                                 <img src="imagem/ult11.png" alt="app apple" class="app-toque1">       
                                 <img src="imagem/ult14.png" alt="app apple" class="app-toque1">
-                                <img src="imagem/calculadora.png" alt="app apple" class="app-toque1">         
+                                <img src="imagem/calculadora.png" alt="app apple"
+                                 class="app-toque1" id="myimagem"> <!--esse id colocar no js-->
                             </div>
                         </div>
                         <div class="tela"> <!--sexta tela--> <!--feito-->
@@ -339,6 +340,32 @@
                     </div> <!--barra de icon de pre seleção-->      
                 </div> <!--comandos-->
             </div> <!--nova-tela-->
+            <div id="blackScreen"> 
+                <!--tela com o conteudo da calculadora-->
+                <ion-icon name="close-outline" id="sair-calc"></ion-icon>
+                <input type="text" id="resultado" placeholder="0" readonly>
+            <div id="todos-bottons">
+                <button class="button" id="buttonC" onclick="clearResult()"><p>C</p></button>
+                <button class="button" id="buttonou" onclick="toggleSign()"><p>+/-</p></button>
+                <button class="button" id="buttonporcen" onclick="appendOperator('%')"><p>%</p></button>
+                <button class="button" id="buttondivi" onclick="appendOperator('/')"><p>÷</p></button>
+                <button class="button" id="button7" onclick="appendNumber('7')"><p>7</p></button>
+                <button class="button" id="button8" onclick="appendNumber('8')"><p>8</p></button>
+                <button class="button" id="button9" onclick="appendNumber('9')"><p>9</p></button>
+                <button class="button" id="buttonx" onclick="appendOperator('*')"><p>x</p></button>
+                <button class="button" id="button4" onclick="appendNumber('4')"><p>4</p></button>
+                <button class="button" id="button5" onclick="appendNumber('5')"><p>5</p></button>
+                <button class="button" id="button6" onclick="appendNumber('6')"><p>6</p></button>
+                <button class="button" id="button-" onclick="appendOperator('-')"><p>-</p></button>
+                <button class="button" id="button1" onclick="appendNumber('1')"><p>1</p></button>
+                <button class="button" id="button2" onclick="appendNumber('2')"><p>2</p></button>
+                <button class="button" id="button3" onclick="appendNumber('3')"><p>3</p></button>
+                <button class="button" id="buttonmais" onclick="appendOperator('+')"><p>+</p></button>
+                <button class="button" id="button0" onclick="appendNumber('0')"><p>0</p></button>
+                <button class="button" id="buttonponto" onclick="appendNumber('.')"><p>.</p></button> 
+                <button class="button" id="buttonigual" onclick="calculate()"><p>=</p></button>   
+            </div> <!--todos-bottons-->  
+           </div> <!--blackScreen-->
     </div> <!--tela principal-->
             <div class="tela-preta">
                     <!-- tive que cria uma tela preta pra cobrir a .telaprincipal quando aperta o button power

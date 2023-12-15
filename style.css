@@ -640,7 +640,7 @@ p#mensagem{
     top: 585px;
     left: 125px;
     cursor: pointer;
-    z-index: 99; /*teste, para evitar sobreposição*/
+    z-index: 99; 
 }
 
 #novaTela {
@@ -756,11 +756,136 @@ p#mensagem{
 .tela {
     display: none;
 }
-  
-  .tela.ativa {
+
+.tela.ativa {
     display: block;
 }
+/*------------------------------------*/
+#blackScreen{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 2;
+    padding: 0 1.9%;
+}
 
+#sair-calc {
+    position: absolute;
+    top: 35px;
+    left: 8px;
+    color: orange;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#resultado {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.4em;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 200px;
+    text-align: right;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: #a1a1a1;
+    width: 100%;
+}
+
+#todos-bottons{
+    position: relative;
+    top: 33%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 8px;
+}
+.button {
+    font-size: 2em;
+    margin: 1px;
+    padding: 5px;
+    border-radius: 50%;
+    width: 69px;
+    height: 69px;
+    background-color: #626262;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: box-shadow 0.1s ease;
+}
+
+.button:active{
+    box-shadow: 0 2px 1px rgba(146, 146, 146, 0.26);
+}
+
+#buttondivi{ /*sinal de divisão*/
+    background-color: orange;
+    color: white;
+}
+#buttondivi >p{
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+#buttonx{
+    background-color: orange;
+    color: white;
+}
+
+#button-{
+    background-color: orange;
+    color: white;
+}
+#button- >p{
+   font-size: 1.5em;
+}
+
+#buttonmais{
+    background-color: orange;
+    color: white;
+}
+#buttonmais >p{
+    font-size: 1.1em;
+}
+
+#buttonigual{
+    background-color: orange;
+    color: white;
+}
+#buttonigual >p{
+    font-size: 1.1em;
+}
+
+#button0,#buttonponto,#button1,#button2,#button3,#button4
+,#button5,#button6,#button7,#button8,#button9{
+    color: white;
+    font-weight: normal;
+}
+
+#buttonponto >p{
+    margin-top: -20px;
+    font-size: 1.5em;
+}
+
+#button0{
+    grid-column: span 2;
+    width: 150px;
+    border-radius: 40px;
+}
+
+#buttonou{
+    transform: rotate(1.5deg);
+}
 /*-------------------------------*/
 
 @media screen and (min-width: 1024px) {/*desktop medio a grande*/
