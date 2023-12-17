@@ -929,5 +929,10 @@ p#mensagem{
     .noti.expancao {
         height: 125px;
     }
+
+    .iphone {
+        width: 380px;
+        height: 650px;
+    }
 }
 
